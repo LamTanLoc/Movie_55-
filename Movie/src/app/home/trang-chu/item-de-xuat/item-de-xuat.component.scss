@@ -1,0 +1,114 @@
+@import "../../../../scss/style.scss";
+.showing__item {
+  overflow: hidden;
+
+  position: relative;
+
+  img {
+    width: 100%;
+    max-height: 375px;
+    display: block;
+    opacity: 1;
+  }
+
+  &:hover .showing__box {
+    opacity: 1;
+    left: -63%;
+  }
+  &:hover .showing__content {
+    opacity: 1;
+    cursor: pointer;
+    display: inline-block;
+  }
+  // .content_item{
+  //   background-color: rgba(111,111,111,0.5);
+  // }
+.content_item{
+  width: 296px;
+  height: 70px;
+  background: linear-gradient(to right, #5e5a3f, #d6bcc0);
+  color:rgb(240, 182, 25);
+  font-weight: 600;
+  font-size: 17px;
+  .name{
+    margin: 30px 0 10px 0;
+  }
+
+}
+  .showing__box {
+    width: 189%;
+    height: 70px;
+    position: absolute;
+    background: linear-gradient(to right, #cfba44, #860f23);
+  
+
+    opacity: 0;
+    bottom: 0%;
+    left: -313%;
+
+    transition: 0.4s;
+    transform: skewX(45deg);
+
+    p {
+      text-align: center;
+      color: white;
+      transform: skewX(-45deg);
+      line-height: 70px;
+      font-size: 17px;
+      padding-left: 80px;
+      letter-spacing: 1px;
+      cursor: pointer;
+     
+      .btn {
+        // background: linear-gradient(to bottom, #fac371, #eb5e0c);
+        background: linear-gradient(to bottom, #ebca0e, #38020b);
+        color:black;
+        border: 1px solid black;
+        
+      
+        &:hover{
+          background: linear-gradient(to right, #2c2b24, #e72545);
+          border: 1px solid white;
+          color:white;
+          
+        }
+      }
+    }
+  }
+
+  .showing__content {
+    position: absolute;
+    text-align: center;
+    top: 28%;
+    left: 35%;
+    display: none;
+    transition: 1s;
+
+    .play {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      border: 2px solid white;
+      color: rgb(255, 255, 255);
+      margin: 0 auto;
+      top: 27%;
+      left: 29%;
+      background-color: rgba(15, 11, 11, 0.3);
+
+      &:hover.play {
+        width: 75px;
+        height: 75px;
+        border-radius: 50%;
+      }
+
+      i {
+        line-height: 70px;
+        font-size: 35px;
+        padding-left: 5px;
+      }
+      p {
+        margin: 16px 0;
+      }
+    }
+  }
+}
